@@ -1,0 +1,34 @@
+<p>
+  Cadastrar works!
+  </p>
+  <form fxFlex>
+    <div class="text-center">
+        <h2>Cadastro</h2>
+    </div>
+    <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
+        <div fxFlexFill>
+            <mat-form-field class="w-100">
+                Nome*: <input matInput placeholder="Nome" required formControlName="nome" >
+                <div *ngIf="nome.errors.required">    
+                    Preenchimento do nome é obrigatório!
+                </div>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+        <div fxFlexFill>
+            <mat-form-field class="w-100">
+                Emprego*: <input matInput placeholder="Emprego" required formControlName="emprego">
+                <div *ngIf="emprego.errors.required">    
+                    Preenchimento do nome é obrigatório!
+                </div>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+        <div fxFlexFill>
+            <button mat-raised-button color="primary" class="w-100" (click)="onCadastrar()">Cadastrar</button>
+        </div>
+    </div>
+
+</form>
